@@ -36,6 +36,7 @@ import {
   dymRenderMonth,
   dymRenderDay,
 } from "@/components/content/map/heatmap";
+import { SHOWHEATMAPPOPUPS, HIDHEATMAPPOPUPS } from "@/store/mutations-types";
 
 import { reqMonthDayData } from "@/network/request";
 
@@ -134,7 +135,7 @@ export default {
             this.weekTexts
           );
         }
-        this.$store.commit("showHeatmapPopups");
+        this.$store.commit(SHOWHEATMAPPOPUPS);
       } else {
         // 关闭展示，清除定时器
         // 切换用户或取消用户选择时清除缓存
@@ -145,7 +146,7 @@ export default {
         if (this.heatmapTimer) {
           clearInterval(this.heatmapTimer);
         }
-        this.$store.commit("hidHeatmapPopups");
+        this.$store.commit(HIDHEATMAPPOPUPS);
       }
     },
   },

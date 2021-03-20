@@ -27,6 +27,7 @@
 
 <script>
 import Header from "@/components/common/Header";
+import {SELECT} from '@/store/mutations-types'
 const imgUrl = require("@/assets/gps.png");
 
 export default {
@@ -42,7 +43,7 @@ export default {
   },
   methods: {
       select(id) {
-          this.$store.commit('select',id);
+          this.$store.commit(SELECT,id);
       }
   },
 };

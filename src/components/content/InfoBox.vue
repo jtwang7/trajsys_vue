@@ -39,6 +39,7 @@
 import InfoBoxRow from "@/components/common/InfoBoxRow";
 import TrajVisualBox from "@/components/content/TrajVisualBox";
 import GlobalTrajVisualBox from "@/components/content/GlobalTrajVisualBox";
+import {CLEARUSER,WATCHUSERID} from '@/store/mutations-types'
 
 export default {
   name: "InfoBox",
@@ -64,10 +65,9 @@ export default {
     },
     // 清空用户时触发
     clearUser() {
-      this.$store.commit("clearUser");
+      this.$store.commit(CLEARUSER);
       this.$refs.trajBox.hiddenTraj();
       this.$refs.glbTrajBox.hiddenGLBTraj();
-      this.$store.commit("clearHeatmapData");
     },
     // 触发单条轨迹请求
     requestData(tid, userid) {
@@ -88,7 +88,7 @@ export default {
   watch: {
     // 监听userid值
     userid: function (newValue) {
-      this.$store.commit("watchUserid", newValue);
+      this.$store.commit(WATCHUSERID, newValue);
     },
   },
 };

@@ -12,12 +12,14 @@
 </template>
 
 <script>
+import {MODALCLICK} from '@/store/mutations-types'
+
 export default {
   name: "ModalBox",
   methods: {
     ok() {
       this.$Message.info("祝您使用愉快");
-      this.$store.commit("modalClick");
+      this.$store.commit(MODALCLICK);
     },
   },
 };

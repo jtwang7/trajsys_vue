@@ -1,0 +1,10 @@
+export const SELECT = 'select';
+export const MENUSELECT = 'menuSelect';
+export const CLEARUSER = 'clearUser';
+export const REQTRAJNUM = 'reqTrajNum';
+export const REQTRAJ = 'reqTraj';
+export const GLBTRAJ = 'glbTraj';
+export const SHOWHEATMAPPOPUPS = 'showHeatmapPopups';
+export const HIDHEATMAPPOPUPS = 'hidHeatmapPopups';
+export const MODALCLICK = 'modalClick';
+export const WATCHUSERID = 'watchUserid';

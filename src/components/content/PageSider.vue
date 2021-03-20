@@ -44,6 +44,8 @@
 </template>
 
 <script>
+import {MENUSELECT} from '@/store/mutations-types'
+
 export default {
   name: "PageSider",
   props: {
@@ -54,7 +56,7 @@ export default {
   },
   methods: {
     menuSelect(name) {
-      this.$store.commit("menuSelect", name);
+      this.$store.commit(MENUSELECT, name);
     },
   },
 };
