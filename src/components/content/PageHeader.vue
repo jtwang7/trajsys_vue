@@ -22,11 +22,16 @@
         </DropdownMenu>
       </Dropdown>
     </template>
+    <template v-slot:header-sign>
+      <Sign :sign="signUrl" :reg="regUrl"/>
+    </template>
   </Header>
 </template>
 
 <script>
 import Header from "@/components/common/Header";
+import Sign from '@/components/common/login/Sign'
+
 import {SELECT} from '@/store/mutations-types'
 const imgUrl = require("@/assets/gps.png");
 
@@ -36,10 +41,14 @@ export default {
     return {
       imgUrl,
       curSelect: "model1",
+
+      signUrl: '/login',
+      regUrl: '/login',
     };
   },
   components: {
     Header,
+    Sign,
   },
   methods: {
       select(id) {

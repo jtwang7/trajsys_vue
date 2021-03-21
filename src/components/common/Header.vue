@@ -7,6 +7,7 @@
     <div class="header-slot">
       <slot name="header-dropdown"></slot>
       <slot name="header-tabs"></slot>
+      <slot name="header-sign"></slot>
     </div>
   </div>
 </template>
